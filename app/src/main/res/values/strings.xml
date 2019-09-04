@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Record</string>
+    <string name="permission_storage_request_tips">该项功能需要申请读写sd卡权限</string>
+</resources>
