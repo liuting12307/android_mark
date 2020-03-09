@@ -1,8 +1,11 @@
 package com.liuting.record;
 
 import android.app.Application;
+import android.content.Intent;
+import android.os.Build;
 
 import com.liuting.record.exception.CrashHandler;
+import com.liuting.record.service.FrontService;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 
@@ -19,5 +22,11 @@ public class MyApplication extends Application {
         super.onCreate();
         CrashHandler.getInstance().init(getApplicationContext());
         Logger.addLogAdapter(new AndroidLogAdapter());
+        Intent intent = new Intent(this, FrontService.class);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent);
+        } else {
+            startService(intent);
+        }
     }
 }

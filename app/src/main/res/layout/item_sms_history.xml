@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:text="发送号码:1000000"
+        android:textColor="#444444"
+        android:textSize="14sp"
+        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="成功"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tv_desc"
+            android:text="转发状态"
+            android:textColor="#444444"
+            android:textSize="14sp"
+           android:layout_toLeftOf="@id/tv_status"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_height="wrap_content">
+    <TextView
+
+        android:id="@+id/tv_time"
+        android:textSize="14sp"
+        android:textColor="#444444"
+        android:text="2015-05-06 15:56:14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tv_message_failed"
+            android:textSize="14sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:text="网络失败"
+            android:layout_gravity="end"
+            android:layout_marginRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#cccccc"/>
+
+
+
+</LinearLayout>
