@@ -1,0 +1,9 @@
+//添加多个自定义属性，可以通过ext代码块
+ext {
+    usename="liuting"
+
+    //生成 测试
+    isRelease=true
+
+    //建立map存储 对象名 key都可以自定义，groovy糖果语法
+}

@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
     }
 
     //(用户行为统计)
@@ -54,13 +55,18 @@ public class MainActivity extends AppCompatActivity {
     @ClickBehavior("我的专区")
     @LoginCheck
     public void toMySpecial() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Log.e(TAG,"开始跳转到我的专区");
     }
 
     //(用户行为统计)
     @OnClick(R.id.bt_my_score)
-    @ClickBehavior("我的得分")
     @LoginCheck
+    @ClickBehavior("我的得分")
     public void toMyScore() {
         Log.e(TAG,"开始跳转到我的得分");
     }

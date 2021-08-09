@@ -4,6 +4,8 @@
     <declare-styleable name="SkinnableButton">
         <attr name="android:background"/>
         <attr name="android:textColor"/>
+        <!-- 字体属性 -->
+        <attr name="custom_typeface"/>
     </declare-styleable>
     <declare-styleable name="SkinnableImageView">
         <attr name="android:src"/>
@@ -17,5 +19,7 @@
     <declare-styleable name="SkinnableTextView">
         <attr name="android:background"/>
         <attr name="android:textColor"/>
+        <!-- 字体属性 -->
+        <attr name="custom_typeface"/>
     </declare-styleable>
 </resources>

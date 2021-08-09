@@ -25,7 +25,7 @@ import org.aspectj.lang.reflect.MethodSignature;
 @Aspect//定义一个切面类
 public class LoginCheckAspect {
 
-    private final String TAG="netease   >>";
+    private final String TAG="BehaviorAspect";
 
 
     //1,找到需要处理的切入点

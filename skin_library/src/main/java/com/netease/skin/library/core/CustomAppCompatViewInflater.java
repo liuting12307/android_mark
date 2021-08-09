@@ -2,6 +2,7 @@ package com.netease.skin.library.core;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 
 import com.netease.skin.library.views.SkinnableButton;
@@ -62,7 +63,12 @@ public final class CustomAppCompatViewInflater extends AppCompatViewInflater {
                 this.verifyNotNull(view, name);
                 break;
         }
+        if(view!=null){
 
+            Log.d("CustomViewInflater",view.toString());
+        }else{
+            Log.d("CustomViewInflater","没有找到view:"+name);
+        }
         return view;
     }
 

@@ -35,8 +35,8 @@ public class LoginActivity extends BaseView<LoginPresenter, LoginContract.View> 
     Button mLoginBt;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        super.onCreate(savedInstanceState);
         ButterKnife.bind(this);
     }
 

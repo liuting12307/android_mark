@@ -7,5 +7,18 @@
         android:layout_width="wrap_content"
         android:text="这是登录界面"
         android:layout_height="wrap_content"/>
+    <com.liuting.aopdemo.customview.MyFrameLayout
+        android:background="#00ff00"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.liuting.aopdemo.customview.MyView
+            android:id="@+id/bt_myview"
+            android:text="点击我"
+            android:layout_gravity="center"
+            android:background="#ff0000"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+    </com.liuting.aopdemo.customview.MyFrameLayout>
 
 </LinearLayout>

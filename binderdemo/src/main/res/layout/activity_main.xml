@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.liuting.binderdemo.VerticalTextView
+        android:id="@+id/btn_1"
+        android:layout_width="20dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="224dp"
+        android:layout_marginTop="228dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:tag="1"
+        app:direction="downtoup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:text="Sandwiches"
+        app:textColor="#000000"
+        app:textSize="16sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

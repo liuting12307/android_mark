@@ -1,1 +1,2 @@
-include ':app',':mvpdemo', ':ndkdemo', ':aopdemo', ':mvvmdemo', ':skinlocal', ':skin_library'
+
+include ':app', ':mvpdemo', ':ndkdemo', ':aopdemo', ':mvvmdemo',  ':skin_library', ':netmusicdynaicskin', ':skin_packages', ':gradledemo', ':binderdemo', ':handler', ':kotlindemo', ':jetpackdemp'

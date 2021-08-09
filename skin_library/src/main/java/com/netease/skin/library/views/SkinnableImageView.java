@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 
 import com.netease.skin.library.R;
+import com.netease.skin.library.SkinManager;
 import com.netease.skin.library.core.ViewsMatch;
 import com.netease.skin.library.model.AttrsBean;
 
@@ -51,9 +52,24 @@ public class SkinnableImageView extends AppCompatImageView implements ViewsMatch
         // 根据styleable获取控件某属性的resourceId
         int backgroundResourceId = attrsBean.getViewResource(key);
         if (backgroundResourceId > 0) {
-            // 兼容包转换
-            Drawable drawable = ContextCompat.getDrawable(getContext(), backgroundResourceId);
-            setImageDrawable(drawable);
+            // 是否默认皮肤
+            if (SkinManager.getInstance().isDefaultSkin()) {
+                // 兼容包转换
+                Drawable drawable = ContextCompat.getDrawable(getContext(), backgroundResourceId);
+                setImageDrawable(drawable);
+            } else {
+                // 获取皮肤包资源
+                Object skinResourceId = SkinManager.getInstance().getBackgroundOrSrc(backgroundResourceId);
+                // 兼容包转换
+                if (skinResourceId instanceof Integer) {
+                    int color = (int) skinResourceId;
+                    setImageResource(color);
+                    // setImageBitmap(); // Bitmap未添加
+                } else {
+                    Drawable drawable = (Drawable) skinResourceId;
+                    setImageDrawable(drawable);
+                }
+            }
         }
     }
 }

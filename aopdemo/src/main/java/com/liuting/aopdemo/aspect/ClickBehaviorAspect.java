@@ -20,7 +20,7 @@ import org.aspectj.lang.reflect.MethodSignature;
 @Aspect//定义一个切面类
 public class ClickBehaviorAspect {
 
-    private final String TAG="netease   >>";
+    private final String TAG="BehaviorAspect";
 
 
     //1,找到需要处理的切入点
@@ -38,10 +38,13 @@ public class ClickBehaviorAspect {
         MethodSignature methodSignature= (MethodSignature) joinPoint.getSignature();
         //获取类名
         String className = methodSignature.getDeclaringType().getSimpleName();
+        Log.e(TAG,"className--"+className);
         //获取方法名
         String methodName = methodSignature.getName();
+        Log.e(TAG,"methodName--"+methodName);
         //获取方法的注解值(统计用户的行为)
         String funName = methodSignature.getMethod().getAnnotation(ClickBehavior.class).value();
+        Log.e(TAG,"funName--"+funName);
 
         //统计方法的执行时间，统计用户点击某功能行为
         long begin=System.currentTimeMillis();

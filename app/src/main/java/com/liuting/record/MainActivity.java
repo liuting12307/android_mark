@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.os.Message;
 import android.os.Process;
 import android.view.View;
 import android.widget.Button;
@@ -64,6 +65,10 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         //这里可以进行回调的操作
         //TODO
 
+        @Override
+        public void handleMessage(@NonNull Message msg) {
+            super.handleMessage(msg);
+        }
     };
     private SmsSendAdapter mSmsSendAdapter;
 
